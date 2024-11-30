@@ -87,3 +87,4 @@ sudo systemctl restart circleci.service
 sudo systemctl status circleci.service
 
 ## Now stop and start the VM
+##sudhir rajput
