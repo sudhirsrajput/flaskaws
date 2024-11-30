@@ -39,15 +39,16 @@ sudo nano /etc/opt/circleci/launch-agent-config.yaml
 
 # Add API in the file and change permissions
 api:
-    auth_token: fe1934e387e8da6bc6e1b7370e2b543e71adcdcb36ae5df015ddfba702654bfcd9d31078e3fbbfd2
+    auth_token: 00da99f6da10e3c200c7790c7a72210e2808765605a6bf3b928e8f5526d1efa72e5a2586070737e7 
 
 runner:
     name: self-hosted
     working_directory: /var/opt/circleci/workdir
     cleanup_working_directory: true
 
-
-
+# auth_token: 00da99f6da10e3c200c7790c7a72210e2808765605a6bf3b928e8f5526d1efa72e5a2586070737e7 ##to get the auth token go to circleci>Self-Hosted Runners>create resource class> create and copy auth code i.e. fe1934e387e8da6bc6e1b7370e2b543e71adcdcb36ae5df015ddfba702654bfcd9d31078e3fbbfd2
+#       ##
+####Note  Enter ctrl+s andctrl+X to save and exit
 ###########
 sudo chown circleci: /etc/opt/circleci/launch-agent-config.yaml
 sudo chmod 600 /etc/opt/circleci/launch-agent-config.yaml
@@ -71,7 +72,7 @@ TimeoutStopSec=18300
 [Install]
 WantedBy = multi-user.target
 
-
+##Note  Enter ctrl+s andctrl+X to save and exit
 ##############
 sudo chown root: /usr/lib/systemd/system/circleci.service
 sudo chmod 644 /usr/lib/systemd/system/circleci.service
